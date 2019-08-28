@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<head>
+
+<title>
+Data Hub - Attendee Tracking
+</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" type="image/png" href="../assets/bdifavicon.png"/> <!-- BDI Favicon -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- jQuery Library -->
+<script type="text/javascript" src="jQueryLibrary.js"></script> <!-- jQuery Local Library -->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> <script type="text/javascript" src="jQueryLibrary.js"></script> <!-- jQuery Library -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js"></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.core.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+<script type="text/javascript" src="loading-bar.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.0/papaparse.js"></script>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css">
+<link rel="stylesheet" type="text/css" href="../attendeeTracking/style.css">
+<link rel="stylesheet" type="text/css" href="../attendeeTracking/loading-bar.css"/>
+
+<!--Bootstrap CSS & JS-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+                <script src="https://embed.small.chat/TMAJ47QG7GM2BHK2PK.js" async></script>
+<div id="media-hide">
+
+        
+
+        <div id="sidebar">
+
+                
+
+                <ul id="sidebar-nav">
+                    <li>
+                        <a href="../index.html"><p>Dashboard</p><i class="fa fa-home menu-icon fa-2x" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="../attendeeTracking/datadt.html"><p>Attendee Tracking</p><i class="fa fa-users menu-icon fa-2x" aria-hidden="true"></i></a>
+                    </li>
+                    <!--<li>
+                        <a href="../eventSnapshot/eventsnapshot.html"><p>Event Snapshot</p><i class="fa fa-camera menu-icon fa-2x" aria-hidden="true"></i></a>
+                    </li> -->
+                    <li>
+                        <a href="../attendeeTracking/key.html" target="_blank"><p>Key</p><i class="fa fa-key menu-icon fa-2x" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><!--Email Metrics<i class="fa fa-envelope menu-icon fa-2x" aria-hidden="true">--></i><p>Coming Soon</p><i class="fa fa-lock menu-icon fa-2x" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+        </div>
+
+    <div id="overlay"> <!-- White/transparent overlay -->
+    </div>
+
+
+    <div id="flex-box">
+        <div id="logo"></div> <!-- BDI Logo -->
+    </div>
+
+    
+
+   <!-- <div id="speech-bubble"><i>Expanding the list!</i></div>-->
+   <div id="loader-flex">
+        <div id="loader"></div>
+   </div>
+
+    
+    <video autoplay muted loop id="video"><source src="../assets/accelerate.mp4" type="video/mp4"></video> <!-- Accelerate Video -->
+
+    <!-- <p id="test"></p>
+    <div id="date"></div> -->
+    
+
+<div class="data-choice">
+
+            <div id="choice-title" class="analyse-and-forecast">
+                    <!--<p id="analyse-and-forecast-icon"><i class="fa fa-chart-line fa-10x"></i></p>-->
+                    <p id="phase">PLANNING PHASE</p>
+                    <p><b>Analyze and Forecast</b></p>
+                    <p id="phase-note">Forecast based on past events</p>
+            </div>
+
+
+            <div id="choice-title" class="predict-for-rsvp">
+                        <!--<p id="analyse-and-forecast-icon"><i class="fa fa-chart-line fa-10x"></i></p>-->
+                        <p id="phase">RECRUITMENT PHASE</p>
+                        <p><b>Predict Final Prospects</b></p>
+                        <p id="phase-note">Prediction based on RSVPS only</p>
+            </div>
+
+
+            <div id="choice-title" class="predict-for-tomorrow">
+                        <!--<p id="analyse-and-forecast-icon"><i class="fa fa-code-branch fa-10x"></i></p>-->
+                        <p id="phase">CONFIRMATION PHASE</p>
+                        <p><b>Predict Final Prospects</b></p>
+                        <p id="phase-note">Prediction based on confirmation calls</p>
+            </div>
+
+</div>
+
+<div id="flex-box">
+<div id="predict-tomorrow">
+
+
+      <div id="predict-flex-3">
+                <div id="predict-title-container">
+                    <p id="predict-title2"><b>Predict Tomorrow's Event</b></p>
+                    <p id="predict-subtitle">Predict number of final prospects for tomorrow's event:</p>
+                    <p id="predict-subtitle2">Confirmation calls must be completed</p>
+                </div>
+        <div id="flex-row">
+                <div id="flex-row-1"><b>Input</b><br><span>Complete the fields below to get a prediction</span></div>
+                <div id="flex-row-1"><b>Prediction</b><br><span>Hover over below to see prediction</span></div>
+                <div id="flex-row-1"><b>Accuracy % (R<sup>2</sup>)</b></div>
+        </div>
+
+                <p id="flex-row-small">
+                        <div id="flex-row-small"><b>Input</b><br><span>Complete the field below to get a prediction</span></div>
+                </p>
+
+        <div id="flex-row">
+                <div id="predict-input-container">
+                    <p id="p-predict"><input id="predict-input-prospects" list="" type="" placeholder="Yes Prospects (including panel)"></p> <!-- City input -->
+                    <p id="p-predict"><input id="predict-input-confirmed" list="" type="" placeholder="Confirmed (including panel)"></p> <!-- City input -->
+                    <p id="p-predict"><input id="predict-input-voicemail" list="" type="" placeholder="Voicemail"></p> <!-- City input -->
+                    <p id="p-predict"><input id="predict-input-na" list="" type="" placeholder="N/A"></p> <!-- City input -->  
+                    <div id="button-flex">
+                    <button id="predictbutton" type="submit"><B>PREDICT <i class="fa fa-random"></i></B></button> <!-- Calcluate Button -->
+                    <button id="predictresetbutton" type="submit"><B>RESET <i class="fa fa-undo"></i></B></button> <!-- Calcluate Button -->
+                    </div>
+                </div>
+
+                          <p id="flex-row-small">
+                                <div id="flex-row-small"><b>Prediction</b><br><span>Hover over below to see prediction</span></div>
+                          </p>
+
+                          <div id="predict-input-container-2">
+                                <div id="donut-small">
+                                        <canvas id="half-donut-predict-tomorrow"></canvas>
+                                </div>
+                          </div>
+
+                          <p id="flex-row-small">
+                                <div id="flex-row-small"><b>Accuracy % (R<sup>2</sup>)</b></div>                                        
+                          </p>
+
+                          <div id="predict-input-container-3">
+                                <canvas id="half-donut-predict-tomorrow-accuracy"></canvas>
+                          </div>
+
+
+        </div>
+      </div>
+</div> 
+</div>
+
+
+<div id="flex-box">
+<div id="predict-rsvp">
+
+                <div id="predict-flex-3">
+                                <div id="predict-title-container">
+                                    <p id="predict-title2"><b>Predict an Event with RSVPs</b></p>
+                                    <p id="predict-subtitle">Predict number of final prospects for any event based on RSVPs:</p>
+                                </div>
+        
+                        <div id="flex-row">
+                                <div id="flex-row-1"><b>Input</b><br><span>Complete the field below to get a prediction</span></div>
+                                <div id="flex-row-1"><b>Prediction</b><br><span>Hover over below to see prediction</span></div>
+                                <div id="flex-row-1"><b>Accuracy % (R<sup>2</sup>)</b></div>
+                        </div>
+
+                        <p id="flex-row-small">
+                                <div id="flex-row-small"><b>Input</b><br><span>Complete the field below to get a prediction</span></div>
+                        </p>
+
+
+                        <div id="flex-row">
+
+                                <div id="predict-input-container">
+                                    <p id="p-predict"><input id="predict-input-prospects-rsvp" list="" type="" placeholder="Yes Prospects (including panel)"></p> <!-- City input -->
+                                    <div id="button-flex">
+                                        <button id="predictbuttonrsvp" type="submit"><B>PREDICT <i class="fa fa-random"></i></B></button> <!-- Calcluate Button -->
+                                        <button id="predictresetbuttonrsvp" type="submit"><B>RESET <i class="fa fa-undo"></i></B></button> <!-- Calcluate Button -->
+                                    </div>
+                                </div>        
+                                          <p id="flex-row-small">
+                                                <div id="flex-row-small"><b>Prediction</b><br><span>Hover over below to see prediction</span></div>
+                                          </p>
+                            
+                                          <div id="predict-input-container-2-rsvp">
+                                                <div id="donut-small">
+                                                        <canvas id="half-donut-predict-rsvp"></canvas>
+                                                </div>
+                                          </div>
+                
+                                          <p id="flex-row-small">
+                                                <div id="flex-row-small"><b>Accuracy % (R<sup>2</sup>)</b></div>                                        
+                                          </p>
+
+                                          <div id="predict-input-container-3">
+                                                <canvas id="half-donut-predict-rsvp-accuracy"></canvas>
+                                          </div>
+                
+                        </div>
+                      </div>
+</div>
+</div>
+
+<div id="analyse-and-forecast-container-all">
+
+<div id="flex-box">
+<div id="input-start">
+
+    <div id="inputcontainer"> <!-- All input boxes inside -->
+            <input id="city" list="cities" type="text" placeholder=" City..."> <!-- City input -->
+            <datalist id="cities">
+            </datalist>
+
+
+            <input id="attendeeFunction" list="attendeefunctions" type="text" placeholder=" Attendee Function..."> <!-- Attendee Function input -->
+            <datalist id="attendeefunctions">
+            </datalist>
+
+
+            <input id="content" list="contentcategories" type="text" placeholder=" Content..."> <!-- Content input -->
+            <datalist id="contentcategories">   
+            </datalist>
+
+
+            <input id="seniority" list="senioritycategories" type="text" placeholder=" Seniority..."> <!-- Seniority input -->
+            <datalist id="senioritycategories">
+            </datalist>
+
+            <input id="client" list="clientcategories" type="text" placeholder=" Client..."> <!-- Seniority input -->
+            <datalist id="clientcategories">
+            </datalist>
+
+            <div id="button-flex">
+            <button id="calculatebutton" type="submit"><B>CALCULATE <i class="fa fa-calculator"></i></B></button> <!-- Calcluate Button -->
+            </div>
+    </div>
+
+  
+
+
+    <div id="summarycontainer">
+        <table id="summarytable">
+                        <div id="bdiloader"></div> 
+            <thead><tr id="theadtitle"><th id="cityhead">City</th><th id="eventhead">#</th><th id="prospecthead">Average Prospects</th><th id="successhead">Success Rate</th><th id="noshowhead">No Show Rate</th></tr></thead>
+            <tbody id="summary-tbody"></tbody>
+        </table>
+<!--
+       <table id="insight-table">
+                <thead><tr><td>DATA INSIGHTS</td><td>1</td><td>1</td><td>1</td></tr></thead>
+
+                <tr><td>Heightest Average No-Show Rate:</td></tr>
+
+                <tr><td>Lowest Average Final Prospects:</td></tr>
+
+                <tr><td>Highest Average Success Rate:</td></tr>
+                
+                <tr><td></td></tr>
+
+                <tr><td></td></tr>
+
+            </table>
+     -->  
+    </div>
+</div>
+</div>
+
+
+<!-- Inputs (below) that were selected which are hidden below the inputcontainer until calculate button is clicked. Once clicked, inputs are shown on output page for reference and validation -->
+
+<div id="flex-box">
+
+<div id="flex-row-input">
+    <p id="input1">City:</p><p id="inputcity"></p>
+</div>
+<div id="flex-row-input">
+    <p id="input2">Function:</p><p id="inputattendeefunction"></p>
+</div>
+<div id="flex-row-input">
+    <p id="input3">Content:</p><p id="inputcontent"></p>
+</div>
+<div id="flex-row-input">
+    <p id="input4">Seniority:</p><p id="inputseniority"></p>
+</div>
+<div id="flex-row-input">
+    <p id="input5">Client:</p><p id="inputclient"></p>
+</div>
+
+</div>
+
+    <div id="button-flex">
+        <button id="resetbutton" type="submit"><B>RESET </B> <i class="fa fa-undo"></i></button> <!-- Reset Button hideen underneath inputcontainer. Display set to block upon calculate button click -->
+        <button id="downloadbutton" type="submit"><B>EXPORT <i class="fa fa-file-csv"></i></B></button> <!-- Reset Button hideen underneath inputcontainer. Display set to block upon calculate button click -->
+    </div>
+
+   <div id="flex-box">
+    <div id="outputcontainer">
+            <div id="databasedon"></div>
+
+            
+
+            <div id="lastupdated"></div>
+        
+        
+        <h3 style="text-align: center; padding-top:0.5%;"><b>Analysis <i class="fa fa-chart-line"></i></b></h3>
+    
+        <p id="note1">Analysis: Your search criteria compared to the average of all events</p>
+
+    <div id="summarybanner1">
+
+                <div id="widget-tab-2">
+                        <p><i class="fa fa-calendar-check fa-3x"></i><p id="widget-sub">Success Rate<br>Analysis</p></p>
+                        <canvas id="analysis-first-D1"></canvas>
+                        <p class="resultstats" id="tab1"></p>
+                        <p class="difference" id="difference1"></p>  
+                </div>
+                <div id="widget-tab-2">
+                        <p><i class="fa fa-ghost fa-3x"></i><p id="widget-sub">No Show Rate<br>Analysis</p></p>
+                        <canvas id="analysis-first-D2"></canvas>
+                        <p class="resultstats" id="tab2"></p>
+                        <p class="difference" id="difference2"></p>  
+                </div>
+                <div id="widget-tab-2">
+                        <p><i class="fa fa-user-slash fa-3x"></i><p id="widget-sub">Cancellation Rate<br>Analysis</p></p>
+                        <canvas id="analysis-first-D3"></canvas>
+                        <p class="resultstats" id="tab3"></p>
+                        <p class="difference" id="difference3"></p>  
+                </div>
+
+                <div id="widget-tab-2">
+                        <p><i class="fa fa-ghost fa-3x"></i> + <i class="fa fa-user-slash fa-3x"></i><p id="widget-sub">NS + Cancellation<br>Analysis</p></p>
+                        <canvas id="analysis-first-D4"></canvas>
+                        <p class="resultstats" id="tab4"></p>
+                        <p class="difference" id="difference4"></p>  
+                </div>
+                <div id="widget-tab-2">
+                        <p><i class="fa fa-user-tie fa-3x"></i><p id="widget-sub">Final Prospects<br>Analysis</p></p>
+                        <canvas id="analysis-first-D5"></canvas>
+                        <p class="resultstats" id="tab5"></p>
+                        <p class="difference" id="difference5"></p>  
+                </div>
+                <div id="widget-tab-2">
+                        <p><i class="fa fa-list-ul fa-3x"></i><p id="widget-sub">List Size<br>Analysis</p></p>
+                        <canvas id="analysis-first-D6"></canvas>
+                        <p class="resultstats" id="tab6"></p>
+                        <p class="difference" id="difference6"></p>  
+                </div>
+ 
+     
+   </div>
+
+        <h3 style="text-align: center; padding-top:1%; margin-top:10%;"><b>Forecast <i class="fa fa-umbrella"></i></b><br></h3>
+        <div id="analysis-container">
+
+                        <div id="title-flex">
+                        <h3 id="prediction"><b>What to Expect <i class="fa fa-chevron-down fa-1x"></i></b></h3>
+                        </div>  
+                        <p id="note2">Forecast: For an event with your selected search criteria, a future event will fall within the data ranges below (95% accuracy)</p>
+
+<!--
+                        <div id="question-tip">
+                                        <p class="question-tool-2">Average, lower value, upper value</p>
+                                        <p><i class="fa fa-question-circle fa-1x"></i></p>
+                        </div>
+-->
+
+                <div id="low-data-container">
+                        Not enough data to create accurate forecast
+                </div>
+        
+
+                <div id="widget-container">
+
+         
+                                <div id="widget-title">
+                                                <div id="widget-tab">
+                                                        <p><i class="fa fa-calendar-check fa-3x"></i><p id="widget-sub">Success Rate<br>Forecast</p></p>
+                                                        <div id="forecast-canvas">
+                                                                <canvas id="analysis-D1"></canvas>
+                                                        </div>
+                                                        <p id="expectation">Forecast Range</p>
+                                                        <p class="low" id="low1"><i class="fa fa-arrow-circle-down"> </i></p>
+                                                        <p class="high" id="high1"><i class="fa fa-arrow-circle-up"> </i></p>
+                                                </div>
+
+                                                <div id="widget-tab">
+                                                        <p><i class="fa fa-ghost fa-3x"></i><p id="widget-sub">No Show Rate<br>Forecast</p></p>
+                                                        <div id="forecast-canvas">
+                                                                <canvas id="analysis-D2"></canvas>
+                                                        </div>
+                                                        <p id="expectation">Forecast Range</p>
+                                                        <p class="low" id="low2"><i class="fa fa-arrow-circle-down"> </i></p>
+                                                        <p class="high" id="high2"><i class="fa fa-arrow-circle-up"> </i></p>
+                                                </div>
+
+                                                <div id="widget-tab">
+                                                        <p><i class="fa fa-user-slash fa-3x"></i><p id="widget-sub">Cancellation Rate<br>Forecast</p></p>
+                                                        <div id="forecast-canvas">
+                                                                <canvas id="analysis-D3"></canvas>
+                                                        </div>
+                                                        <p id="expectation">Forecast Range</p>
+                                                        <p class="low" id="low3"><i class="fa fa-arrow-circle-down"> </i></p>
+                                                        <p class="high" id="high3"><i class="fa fa-arrow-circle-up"> </i></p>
+                                                </div>
+
+                                                <div id="widget-tab">
+                                                        <p><i class="fa fa-ghost fa-3x"></i> + <i class="fa fa-user-slash fa-3x"></i><p id="widget-sub">NS + Cancellation Rate<br>Forecast</p></p>
+                                                        <div id="forecast-canvas">
+                                                                <canvas id="analysis-D4"></canvas>
+                                                        </div>
+                                                        <p id="expectation">Forecast Range</p>
+                                                        <p class="low" id="low4"><i class="fa fa-arrow-circle-down"> </i></p>
+                                                        <p class="high" id="high4"><i class="fa fa-arrow-circle-up"> </i></p>
+                                                </div>
+
+                                                <div id="widget-tab">
+                                                        <p><i class="fa fa-user-tie fa-3x"></i><p id="widget-sub">Final Prospects<br>Forecast</p></p>
+                                                        <div id="forecast-canvas">
+                                                                <canvas id="analysis-D5"></canvas>
+                                                        </div>
+                                                        <p id="expectation">Forecast Range</p>
+                                                        <p class="low" id="low5"><i class="fa fa-arrow-circle-down"> </i></p>
+                                                        <p class="high" id="high5"><i class="fa fa-arrow-circle-up"> </i></p>
+                                                </div>         
+                                </div>
+
+
+                </div>  
+                           
+        
+            
+        
+           
+                              
+        </div>
+
+       <!-- 
+        <div id="graph1">
+                <p id="distribution-title">Analysis Distribution</p>
+                                
+                <canvas id="summaryGraph1" width="100%" height="40%"></canvas>
+        </div>  
+        -->
+  
+        <h3 style="text-align: center; padding-top:0.5%;"><b>Raw Data <i class="fa fa-list-ol"></i></b></h3>
+
+    
+        <table id="rates">
+
+                <p id="note3">Scroll left and right to view the full table of raw data</p>
+
+        
+            <thead><tr id="theadtitle"><th>#</th><th>Date</th><th>City</th><th>Client</th><th>Event Title</th><th>Attendee Function</th><th>Target</th><th>RSVP Yes</th><th>Panelists</th><th>Confirmed</th><th>Voicemail</th><th>Unavailable</th><th>Final Attendees</th><th>Final Prospects</th><th>No Shows</th><th>Cancel Day of</th><th>Cancel One Day Before</th><th>NS/Cancellation Total</th><th>List Size</th><th>Content</th><th>Content Rating</th><th>Seniority</th><th>Success Rate</th><th>No Show Rate</th><th>Cancellation Rate</th><th>Total NS/Cancellation Rate</th><th>Response Rate</th><th>RSVP Rate</th><th>Conversion Rate</th></tr></thead>
+            <tbody></tbody>
+        </table>
+
+    </div> <!-- Output container hideen underneath inputcontainer. Display set to block upon calculate button click -->
+   </div>
+
+</div>
+</div>
+
+
+</body>
+<script src="https://unpkg.com/simple-statistics@7.0.2/dist/simple-statistics.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="datadt.js"></script> <!-- Link to JavaScript file -->
+<script src="donutChartPredict1.js"></script> <!-- Link to JavaScript file -->
+<script src="donutChartPredict2.js"></script> <!-- Link to JavaScript file -->
+
+</html>

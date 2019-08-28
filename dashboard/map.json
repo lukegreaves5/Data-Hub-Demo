@@ -1,0 +1,613 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "New York"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.9764404296875,
+            40.75974059207392
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Stamford"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -73.4930419921875,
+            41.064856932068835
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Vancouver"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -123.0908203125,
+            49.31079887964633
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Seattle"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -122.34374999999999,
+            47.57652571374621
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "San Francisco"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -122.431640625,
+            37.78808138412046
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "San Jose"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -121.88232421875,
+            37.28279464911045
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Los Angeles"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -118.23486328125,
+            34.07086232376631
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Palo Alto"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -122.16350555419922,
+            37.44106442458557
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Silicon Valley"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -122.05261230468751,
+            37.62945956107554
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Irvine"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -117.79815673828125,
+            33.63062889539562
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Orange County"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -117.0648193359375,
+            33.33970700424026
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Phoenix"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -112.08251953125,
+            33.44060944370356
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Denver"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -104.9853515625,
+            39.757879992021756
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Dallas"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -96.83349609375,
+            32.80574473290688
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Houston"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -95.4052734375,
+            29.802517905764475
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Austin"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.734375,
+            30.268556249047727
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "San Antonio"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.525390625,
+            29.410890376109023
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Orlando"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -81.39770507812499,
+            28.584521719370393
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Miami"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -80.211181640625,
+            25.77021384896025
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Charlotte"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -80.83740234375,
+            35.21869749632885
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Washington DC"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -77.04711914062499,
+            38.87392853923629
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Baltimore"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -76.53076171875,
+            39.35129035526705
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Philadelphia"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -75.267333984375,
+            39.985538414809746
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Pittsburgh"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.969482421875,
+            40.39676430557203
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Boston"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -71.01356506347656,
+            42.33722984357811
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Cambridge"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -71.10076904296875,
+            42.393037095207596
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Morristown"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -74.48799133300781,
+            40.80133575979199
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Basking Ridge"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -74.57347869873047,
+            40.64756405258068
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Toronto"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -79.38720703125,
+            43.65197548731187
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Detroit"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -83.056640625,
+            42.35854391749705
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Columbus"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -82.99072265625,
+            39.96870074491693
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Indianapolis"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -86.15478515625,
+            39.76632525654491
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "St. Louis"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -90.186767578125,
+            38.61687046392973
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Chicago"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -87.62695312499999,
+            41.902277040963696
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Minneapolis"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -93.27392578125,
+            44.98034238084973
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Atlanta"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -84.39697265625,
+            33.7243396617476
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Nashville"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -86.7919921875,
+            36.15561783381855
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "marker-color": "#7E7E7E",
+          "marker-size": "medium",
+          "marker-symbol": "",
+          "cityName": "Princeton"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -74.64797973632812,
+            40.3549167507906
+          ]
+        }
+      }
+    ]
+  }

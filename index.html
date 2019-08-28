@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Data HUB - Dashboard</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <link rel="shortcut icon" type="image/png" href="../dataHub/assets/bdifavicon.png"/> <!-- BDI Favicon -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <link rel="stylesheet" href="../dataHub/dashboard/dashboard.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+
+</head>
+
+<body>
+
+                <script src="https://embed.small.chat/TMAJ47QG7GM2BHK2PK.js" async></script>
+            <!-- <div id="speech-bubble"><i>Expanding the list!</i></div>-->
+
+            <!--
+   <div id="loader-flex">
+                <div id="loader"></div>
+                <div id="loader-text">Loading...</div>
+        </div>
+        -->
+              
+<dibv id="media-hide">
+                
+                <div id="sidebar">
+
+                
+
+                                <ul id="sidebar-nav">
+                                    <li>
+                                        <a href="../dataHub/index.html"><p>Dashboard</p><i class="fa fa-home menu-icon fa-2x" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="../dataHub/attendeeTracking/datadt.html"><p>Attendee Tracking</p><i class="fa fa-users menu-icon fa-2x" aria-hidden="true"></i></a>
+                                    </li>
+                                    <!--<li>
+                                        <a href="../eventSnapshot/eventsnapshot.html"><p>Event Snapshot</p><i class="fa fa-camera menu-icon fa-2x" aria-hidden="true"></i></a>
+                                    </li> -->
+                                    <li>
+                                        <a href="../dataHub/attendeeTracking/key.html" target="_blank"><p>Key</p><i class="fa fa-key menu-icon fa-2x" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><!--Email Metrics<i class="fa fa-envelope menu-icon fa-2x" aria-hidden="true">--></i><p>Coming Soon</p><i class="fa fa-lock menu-icon fa-2x" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                        </div>
+
+
+        <div id="flex-box">
+                <div id="logo"></div> <!-- BDI Logo -->
+        </div>
+
+        <div id="loader-flex">
+                <div id="loader"></div>
+        </div>
+
+        <!--
+        <div id="flex-box">
+                <div id="last-updated"></div>
+        </div>
+        -->
+
+        <div id="overview">
+                
+            <p><b>Data Overview</b></p>
+       
+            <p>Business Development Institute</p>
+
+        </div>
+       
+        
+    <div id="loadHide">
+        
+        <div id="success-report-container">
+        <p id="title2">Success Report: <button id="summarybutton2018">2018</button> <button id="summarybutton2019">2019</button> <button id="summarybuttonAllData">All Data</button> <button id="summarybuttonCompare">Compare</button></p>
+        </div>  
+
+<div id="summary-banner-container">
+
+        <div id="summarybanner1">
+        
+                <div id="tab">
+                        <p class="resultstats"><i class="fa fa-map-marked-alt fa-2x"></i></p>
+                        <p class="resultstats" id="tab1"></p>
+                </div>
+                <div id="tab">
+                        <p class="resultstats"><i class="fa fa-hands-helping fa-2x"></i></p>
+                        <p class="resultstats" id="tab2"></p>
+                </div>
+                <div id="tab">
+                        <p class="resultstats"><i class="fa fa-calendar-alt fa-2x"></i></p>
+                        <p class="resultstats" id="tab3"></p>
+                </div>
+                <div id="tab">
+                        <p class="resultstats"><i class="fa fa-user-tie fa-2x"></i></p>
+                        <p class="resultstats" id="tab4"></p>
+                </div>
+                <div id="tab">
+                        <p class="resultstats"><i class="fa fa-user-tag fa-2x"></i></p>
+                        <p class="resultstats" id="tab5"></p>
+                </div>
+     
+        </div>
+        <hr> 
+      
+
+
+        <div id="summarybanner2">
+                <div id="tab">
+                        <p class="resultstats"><i class="fa fa-map-marked-alt fa-2x"></i></p>
+                        <p class="resultstats" id="tab1b"></p>
+                </div>
+                <div id="tab">
+                        <p class="resultstats"><i class="fa fa-hands-helping fa-2x"></i></p>
+                        <p class="resultstats" id="tab2b"></p>
+                </div>
+                <div id="tab">
+                        <p class="resultstats"><i class="fa fa-calendar-alt fa-2x"></i></p>
+                        <p class="resultstats" id="tab3b"></p>
+                </div>
+                <div id="tab">
+                        <p class="resultstats"><i class="fa fa-user-tie fa-2x"></i></p>
+                        <p class="resultstats" id="tab4b"></p>
+                </div>
+                <div id="tab">
+                        <p class="resultstats"><i class="fa fa-user-tag fa-2x"></i></p>
+                        <p class="resultstats" id="tab5b"></p>
+                </div>
+     
+        </div>
+
+</div>
+        
+
+
+    
+        </div>
+        <hr> 
+        <div id="map-container">
+                <div id="map">
+                </div>
+        </div>
+
+    <div id="loadHide2">
+
+        <div id="attendee-tracking-container">           
+                
+            <div id="data-title">
+                <p><b>Global Averages </b> <i class="fa fa-globe-americas"></i></p>
+            </div>
+
+        
+
+            <div id="widget-title">
+                        <div id="widget-tab">
+                                <p><i class="fa fa-calendar-check fa-3x"></i></p>
+                                <p id="widget-sub">Average<br> Success Rate</p>
+                                <p id="result1"></p>
+                        </div>
+                        <div id="widget-tab">
+                                <p><i class="fa fa-ghost fa-3x"></i></p>
+                                <p id="widget-sub">Average<br> No Show Rate</p>
+                                <p id="result2"></p>
+                        </div>
+                        <div id="widget-tab">
+                                <p><i class="fa fa-user-slash fa-3x"></i></p>
+                                <p id="widget-sub">Average<br> Cancellation Rate</p>
+                                <p id="result3"></p>                   
+                        </div>
+                        <div id="widget-tab">
+                                <p><i class="fa fa-ghost fa-3x"></i> + <i class="fa fa-user-slash fa-3x"></i></p>
+                                <p id="widget-sub-alt">Average No Show + Cancellation Rate</p>
+                                <p id="result4"></p>
+                        </div>
+                        <div id="widget-tab">
+                                <p><i class="fa fa-user-tie fa-3x"></i></p>
+                                <p id="widget-sub">Average<br> Final Prospects</p>
+                                <p id="result5"></p>
+                        </div>
+                        <div id="widget-tab">
+                                <p><i class="fa fa-user-edit fa-3x"></i></p>
+                                <p id="widget-sub">Average<br> Response Rate</p>
+                                <p id="result6"></p>
+                        </div>
+                        <div id="widget-tab">
+                                <p ><i class="fa fa-user-check fa-3x"></i></p>
+                                <p id="widget-sub">Average<br> RSVP Rate</p>
+                                <p id="result7"></p>
+                        </div>
+                        <div id="widget-tab">
+                                <p ><i class="fa fa-user-lock fa-3x"></i></p>
+                                <p id="widget-sub">Average<br> Conversion Rate</p>   
+                                <p id="result8"></p>
+                        </div>      
+                       
+           </div>
+
+        
+           <div id="data-title">
+                        <p><b>KPIs Measured Over Time </b> <i class="fa fa-chart-line"></i></p>
+           </div>
+   
+
+        <div id="graph1">
+                
+                        <div id="graph-title">
+                                        <p>Select a metric to view its performance over time: <br></p> 
+                                        <p>
+                                                        <select id="metric-select">
+                                                        <option value="responseRate" selected>Response Rate</option>
+                                                        <option value="rsvpRate">RSVP Rate</option>
+                                                        <option value="conversionRate">Conversion Rate</option>
+                                                        <option value="successRate">Success Rate</option>
+                                                        <option value="noShowRate">No Show Rate</option>
+                                                        <option value="cancellationRate">Cancellation Rate</option>
+                                                        <option value="noShowCancellationRate">No Show + Cancellation Rate</option>
+                                                        <option value="finalProspects">Final Prospects</option>
+                                                        <option value="listSize">List Size</option>
+                                                        </select>
+                                        </p>
+                                               
+                        </div>
+
+                    <div id="graph-container">
+
+                        <div id="graph-1-container">
+                                <canvas id="summarygraph1"></canvas>
+                        </div>
+
+                        <div id="graph-1-metrics">
+                        
+                                       <!-- <div  id="metric-flex">
+                                                <p id="kpi1-title">Global Response Rate:<br>
+                                                <span>Cumulative number of responses / Cumulative list size</span></p>
+                                                
+                                                <p id="kpi1-number"></p>
+                                        </div>-->
+                                        
+                                        <div  id="metric-flex">
+                                                <p id="kpi2-title">Average Response Rate:<br>
+                                                <span>Total of each event's response rate / Total number of events</span></p>
+                                                <p id="kpi2-number"></p>
+                                        </div>
+                                        
+                                        <div  id="metric-flex">
+                                                <p id="kpi3-title">Highest Recorded Average Response Rate:</p>
+                                                <p id="kpi3-number"></p>
+                                        </div>
+
+                                        <div  id="metric-flex">
+                                                <p id="kpi4-title">Lowest Recorded Average Response Rate:</p>
+                                                <p id="kpi4-number"></p>
+                                        </div>
+
+                                        <div  id="metric-flex">
+                                                <p id="kpi5-title">Variance:<br>
+                                                <span>A high variance indicates that the data points are very spread out from the average, and from one another</span></p>
+                                                <p id="kpi5-number"></p>
+                                        </div>
+                        
+                        </div>
+                   
+                       
+                    </div>
+               
+
+             </div> 
+        </div>
+     </div>
+
+
+   
+
+
+     
+
+
+
+</div>
+
+           
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+<!---<script src="visualization.js"></script>-->
+<script src="https://unpkg.com/simple-statistics@7.0.2/dist/simple-statistics.min.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+	
+<script type="text/javascript" src="../dataHub/dashboard/dashboard.js"></script>
+
+</html>

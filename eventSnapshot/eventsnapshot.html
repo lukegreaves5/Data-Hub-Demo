@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<head>
+
+<title>
+Data Hub - Event Snapshot
+</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" type="image/png" href="../assets/bdifavicon.png"/> <!-- BDI Favicon -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- jQuery Library -->
+<script type="text/javascript" src="jQueryLibrary.js"></script> <!-- jQuery Local Library -->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> <script type="text/javascript" src="jQueryLibrary.js"></script> <!-- jQuery Library -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js"></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.core.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+<script type="text/javascript" src="loading-bar.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.0/papaparse.js"></script>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css">
+<link rel="stylesheet" type="text/css" href="../attendeeTracking/style.css">
+<link rel="stylesheet" type="text/css" href="../attendeeTracking/loading-bar.css"/>
+
+<!--Bootstrap CSS & JS-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body style="overflow: scroll;">
+
+        <script src="https://embed.small.chat/TMAJ47QG7GM2BHK2PK.js" async></script>
+            
+        <div id="sidebar">
+                <ul id="sidebar-nav">
+                    <li>
+                        <a href="../index.html"><p>Dashboard</p><i class="fa fa-home menu-icon fa-2x" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="../attendeeTracking/datadt.html"><p>Attendee Tracking</p><i class="fa fa-users menu-icon fa-2x" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="../eventSnapshot/eventsnapshot.html"><p>Event Snapshot</p><i class="fa fa-camera menu-icon fa-2x" aria-hidden="true"></i></a>
+                    </li> 
+                    <li>
+                        <a href="../attendeeTracking/key.html" target="_blank"><p>Key</p><i class="fa fa-key menu-icon fa-2x" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><!--Email Metrics<i class="fa fa-envelope menu-icon fa-2x" aria-hidden="true">--></i><p>Coming Soon</p><i class="fa fa-lock menu-icon fa-2x" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+        </div>
+
+
+<div id="flex-box">
+    <div id="logo"></div> <!-- BDI Logo -->
+</div>
+
+    <div id="flex-box">
+        <div id="snapshot-title"><p>Event Snapshot</p></div>
+    </div>
+
+    <div id="flex-box-snapshot">
+
+            <table id="snapshot-table">
+                <thead><tr><td>Event Date</td><td>Client Name</td><td>City</td><td>Total Registrants</td><td>Prospects</td><td>Target</td><td>Capacity</td><td>Days</td><td>Progress</td><td>Prediction</td><td>Forecast</td><td>Reg List</td></tr></thead>
+
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+
+            </table>
+
+    </div>
+    
+
+
+</body>
+<script src="https://unpkg.com/simple-statistics@7.0.2/dist/simple-statistics.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="../attendeeTracking/datadt.js"></script> <!-- Link to JavaScript file -->
+
+</html>
