@@ -9,5 +9,5 @@ Tasks to complete:
   a. <strike>Sidebar menu</strike>
   b. <strike>Flex box for results on Dashbaord and Datadt</strike>
 4. Add tooltips to all metrics
-5. Add live chat for team questions/edits/requests
-6. Global Responsiveness
+5. <strike>Add live chat for team questions/edits/requests</strike>
+6. <strike>Global Responsiveness</strike>

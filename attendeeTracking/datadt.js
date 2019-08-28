@@ -44,7 +44,8 @@ var $difference6 = $("#difference6").css("display", "none");
 var $distributionTitle = $('#distribution-title').css("display", "none");
 
 
-var url = 'https://docs.google.com/spreadsheets/d/1d5238rErONJCDtVPXbLFOCKwmifCDHpjqfdBRnzJEN0/edit#gid=1668841256';
+var url = 'https://docs.google.com/spreadsheets/d/1GRyzoiGK_8wd0haXstQxts-ZhSO-hrdfT-AJ1SZgCzI/edit#gid=1668841256';
+
 
 $downloadButton = $('#downloadbutton');
 $loader = $('#loader');

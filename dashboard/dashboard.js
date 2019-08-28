@@ -52,7 +52,7 @@ $loader.css("display", "block");
 
 
 // Insert Google Sheet URL below
-var url = 'https://docs.google.com/spreadsheets/d/1d5238rErONJCDtVPXbLFOCKwmifCDHpjqfdBRnzJEN0/edit#gid=1668841256';
+var url = 'https://docs.google.com/spreadsheets/d/1GRyzoiGK_8wd0haXstQxts-ZhSO-hrdfT-AJ1SZgCzI/edit#gid=1668841256';
 
 
 // Tabletop initiated
@@ -410,7 +410,7 @@ function success2018() {
   $tab3.append($("<span>/span>").text(data2018.length).append($("<p>/p>").text(" " + "Events")));
   $tab4.append($("<span>/span>").text(ss.sum(dashboard_totalProspects2018)).append($("<p>/p>").text(" " + "Prospects")));
   $tab5.append($("<span>/span>").text(ss.sum(dashboard_totalPanelists2018)).append($("<p>/p>").text(" " + "Panelists")));
-  $summaryBanner1.css("background", "url(assets/2018.png)");
+  $summaryBanner1.css("background", "url(../assets/2018.png)");
   $summaryBanner1.css("background-repeat", "no-repeat");
   $summaryBanner1.css("background-position", "center");
   $summaryBanner1.css("background-size", "contain");
@@ -428,7 +428,7 @@ function success2019() {
   $tab3.append($("<span>/span>").text(data2019.length).append($("<p>/p>").text(" " + "Events")));
   $tab4.append($("<span>/span>").text(ss.sum(dashboard_totalProspects2019)).append($("<p>/p>").text(" " + "Prospects")));
   $tab5.append($("<span>/span>").text(ss.sum(dashboard_totalPanelists2019)).append($("<p>/p>").text(" " + "Panelists")));
-  $summaryBanner1.css("background", "url(assets/2019.png)");
+  $summaryBanner1.css("background", "url(../assets/2019.png)");
   $summaryBanner1.css("background-repeat", "no-repeat");
   $summaryBanner1.css("background-position", "center");
   $summaryBanner1.css("background-size", "contain");
@@ -446,7 +446,7 @@ function successAllData() {
   $tab3.append($("<span>/span>").text(mainData.length).append($("<p>/p>").text(" " + "Events")));
   $tab4.append($("<span>/span>").text(ss.sum(dashboard_totalProspects)).append($("<p>/p>").text(" " + "Prospects")));
   $tab5.append($("<span>/span>").text(ss.sum(dashboard_totalPanelists)).append($("<p>/p>").text(" " + "Panelists")));
-  $summaryBanner1.css("background", "url(assets/All-Data.png)");
+  $summaryBanner1.css("background", "url(../assets/All-Data.png)");
   $summaryBanner1.css("background-repeat", "no-repeat");
   $summaryBanner1.css("background-position", "center");
   $summaryBanner1.css("background-size", "contain");
@@ -465,12 +465,12 @@ function successCompare() {
   $tab5b.empty();
   
 
-  $summaryBanner1.css("background", "url(assets/2018.png)");
+  $summaryBanner1.css("background", "url(../assets/2018.png)");
   $summaryBanner1.css("background-repeat", "no-repeat");
   $summaryBanner1.css("background-position", "center");
   $summaryBanner1.css("background-size", "contain");
   $summaryBanner2.css("display", "flex");
-  $summaryBanner2.css("background", "url(assets/2019.png)");
+  $summaryBanner2.css("background", "url(../assets/2019.png)");
   $summaryBanner2.css("background-repeat", "no-repeat");
   $summaryBanner2.css("background-position", "center");
   $summaryBanner2.css("background-size", "contain");
@@ -530,9 +530,9 @@ var path = d3.geoPath()
 			.projection(projection);
 
 var div = d3.select("body").append("div")
-    /*.attr("class", "tooltip")
+    .attr("class", "tooltip")
     .style("opacity", 0);
-*/
+
 //Create SVG element and append map to the SVG
 var svg = d3.select("#map")
 			.append("svg")
@@ -542,7 +542,7 @@ var svg = d3.select("#map")
       .attr("preserveAspectRatio", "xMidYMid meet")
 
 // Load GeoJSON data and merge with states data
-d3.json("../dataHub/dashboard/boston_neighborhoods.json", function(json) {
+d3.json("../dashboard/boston_neighborhoods.json", function(json) {
 	
 	// Bind the data to the SVG and create one path per GeoJSON feature
 	svg.selectAll("path")
@@ -559,7 +559,7 @@ d3.json("../dataHub/dashboard/boston_neighborhoods.json", function(json) {
       console.log(json[i].features);
   }
 
-	d3.json("../dataHub/dashboard/map.json", function(data) {
+	d3.json("../dashboard/map.json", function(data) {
 
 
    /* for (var i = 0; i < data.features.length; i++) {
