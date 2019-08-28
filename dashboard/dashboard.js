@@ -529,9 +529,7 @@ var projection = d3.geoAlbersUsa()
 var path = d3.geoPath()
 			.projection(projection);
 
-var div = d3.select("body").append("div")
-    .attr("class", "tooltip")
-    .style("opacity", 0);
+
 
 //Create SVG element and append map to the SVG
 var svg = d3.select("#map")
